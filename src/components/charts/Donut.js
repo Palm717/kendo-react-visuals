@@ -2,12 +2,25 @@ import {
   Chart,
   ChartTitle,
   ChartLegend,
+  ChartTooltip,
   ChartSeries,
   ChartSeriesItem,
   ChartSeriesLabels,
 } from "@progress/kendo-react-charts";
 
 import { COLORS } from "../../constant";
+
+const renderTooltip = (context) => {
+  const { category, value } = context.point || context;
+
+  return (
+    <>
+      <div>
+        {category}: {value}%
+      </div>
+    </>
+  );
+};
 
 // Graph Data
 
@@ -44,6 +57,7 @@ const Charts = (props) => {
       <Chart>
         <ChartTitle text="Application Status - this month" />
         <ChartLegend visible={false} />
+        <ChartTooltip render={renderTooltip} />
         <ChartSeries>
           <ChartSeriesItem
             type="donut"
