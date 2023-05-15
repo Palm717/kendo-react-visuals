@@ -4,6 +4,7 @@ import "./App.css";
 
 import Donut from "./components/charts/Donut";
 import Bar from "./components/charts/Bar";
+import Line from "./components/charts/Line";
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
           <Donut />
           <div className="section">
             <Bar />
+          </div>
+          <div className="section">
+            <Line />
           </div>
         </div>
       </div>

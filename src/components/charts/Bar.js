@@ -53,7 +53,7 @@ const seriesLabels = {
 const Bar = (props) => {
   return (
     <>
-      <Chart>
+      <Chart zoomable pannable>
         <ChartTitle text="Application Status - last 3 months" />
         <ChartLegend visible={true} />
         <ChartCategoryAxis>
