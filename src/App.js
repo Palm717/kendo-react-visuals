@@ -5,6 +5,7 @@ import "./App.css";
 import Donut from "./components/charts/Donut";
 import Bar from "./components/charts/Bar";
 import Line from "./components/charts/Line";
+import SparkLineContainer from "./components/charts/SparkLine";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
           <div className="section">
             <Line />
           </div>
+        </div>
+        <div className="section">
+          <SparkLineContainer />
         </div>
       </div>
     </div>
